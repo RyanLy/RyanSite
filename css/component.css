@@ -43,6 +43,11 @@ a:hover {
 	color: #fff;
 }
 
+.links:hover{
+	cursor:pointer;
+	color:#000D47;
+}
+
 .container { height: 100%; }
 
 .bl-main {
