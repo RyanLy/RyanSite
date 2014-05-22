@@ -1,0 +1,16 @@
+{
+  "name": "RyanLySite",
+  "version": "0.0.0",
+  "description": "Ryan Ly's personal site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ryan Ly",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.3.0",
+    "path": "~0.4.9"
+  }
+}
