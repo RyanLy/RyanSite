@@ -1,6 +1,6 @@
 {
   "name": "RyanLySite",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Ryan Ly's personal site",
   "main": "server.js",
   "scripts": {
@@ -13,5 +13,8 @@
     "express": "~4.3.0",
     "path": "~0.4.9",
     "ejs": "~1.0.0",
+  },
+    "engines": {
+    "node": "0.10.x"
   }
 }
