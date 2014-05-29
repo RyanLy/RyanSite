@@ -12,9 +12,10 @@
   "dependencies": {
     "express": "~4.3.0",
     "path": "~0.4.9",
-    "ejs": "~1.0.0"
+    "ejs": "~1.0.0",
+    "newrelic": "~1.6.0"
   },
-    "engines": {
+  "engines": {
     "node": "0.10.x"
   }
 }
