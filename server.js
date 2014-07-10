@@ -24,9 +24,6 @@ app.get('/test', function(req, res) {
     users: users,});
  });
 
-tefsad
-
-
 app.listen(process.env.PORT || 7000)
 
 console.log("Listening on port 7000");
