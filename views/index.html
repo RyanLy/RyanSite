@@ -5,14 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ryan Ly</title>
-		<meta name="description" content="Fullscreen Layout with Page Transitions" />
+		<meta name="description" content="Ryan Ly's Personal Website" />
 		<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
 		<meta name="author" content="Ryan Ly" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-
-		<script src="js/modernizr.custom.js"></script>
-		<script type="text/javascript" src="ejs_production.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -21,16 +18,16 @@
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-about">About</h2>
 					</div>
-						<div class="bl-content">
-							<div class = "center-content">
-								<h1>About Me</h1>
-								<p>Welcome to my webpage.  Enjoy your stay.  Contact me if you have any questions.</p>
-								<p>I'm Ryan and I'm a 3rd year student studying Computer Science at the University of Waterloo.</p>
-								<p>I love learning about modern tools and technologies, such as Node.js and Angularjs, and making cool stuff with these tools.</p>
-								<p>In terms of development experience, I've mostly worked in small teams in a start up setting.</p>
-								<p>I'm also working on a few projects.  You can check them out in the projects section.</p>
-							</div>
+					<div class="bl-content">
+						<div class = "center-content">
+							<h1>About Me</h1>
+							<p>Welcome to my webpage.  Enjoy your stay.  Contact me if you have any questions.</p>
+							<p>I'm Ryan and I'm a 3rd year student studying Computer Science at the University of Waterloo.</p>
+							<p>I love learning about modern tools and technologies, such as Node.js and Angularjs, and making cool stuff with these tools.</p>
+							<p>In terms of development experience, I've mostly worked in small teams in a start up setting, so I'm looking some development experience with larger technology firms</p>
+							<p>I'm also working on a few projects.  You can check them out in the <a href="javascript:test()">projects</a> section.</p>
 						</div>
+					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
 				<section id="middle">
@@ -41,28 +38,24 @@
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
+
 				<section id="bl-work-section">
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-works">Projects</h2>
 					</div>
 					<div class="bl-content">
 						<div class = "center-content">
-						<h1>
-				        Projects
-				      </h1>
-				      <br></br>
-				      <h2 ><a class="bl-icon-projects bl-icon-projects-android"></a>
-				        Sudoku Voices
-				      </h2>
-				      <p>
-				        An Android application coded in <del>Eclipse</del> Android Studio.  I plan to release this on the App store in the near future, as it is not quite ready yet. Meanwhile, you are free to download and try the game.  The APK can be downloaded from the link below. Please email me any suggestions or bugs found!
-				      </p>
-				      <p> <a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku" >Download</a>
-				      </p>
-				  	</div>
+							<h1>Projects</h1><br>
+					      	<h2><a class="bl-icon-projects bl-icon-projects-android"></a>Sudoku Voices</h2>
+						      <p>
+						        An Android application coded in <del>Eclipse</del> Android Studio.  I plan to release this on the App store in the near future, as it is not quite ready yet. Meanwhile, you are free to download and try the game.  The APK can be downloaded from the link below. Please email me any suggestions or bugs found!
+						      </p>
+						      <p> <a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku" >Download</a></p>
+					  	</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
+
 				<section>
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-blog">Blog</h2>
@@ -75,36 +68,28 @@
 						</div>
 					</div>
 				</section>
+
 				<section>
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-contact">Contact</h2>
 					</div>
 					<div class="bl-content">
 						<div class = "center-content">
-							<h1>
-					        Contact Me
-					        </h1>
+							<h1>Contact Me</h1>
 					        <p>I would love to meet and talk over a cup of coffee.  Don't hesitate to contact me!</p>
-					        <p>
-					          Find me on these networks, or email me! ...Or leave a message.
-					        </p>
-
+					        <p>Find me on these networks, or email me! ...Or leave a message.</p>
 					        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
 					        <a class="bl-icon-social-media bl-icon-social-media-facebook"href = "https://www.facebook.com/RyanLyyy" title="Add me on Facebook!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-twitter" href = "https://twitter.com/Windask" title="Follow me on Twitter!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
-					        </p>
-
-					        <p>
-					          Leave me a message!
-					        </p>
+					        <p>Leave me a message!</p>
 					        <form id = "message-form">
-					        <input class = "info-box" type = "text" name = "name" placeholder="name"> <br>
-					        <input class = "info-box" type = "text" name = "email" placeholder="email(optional)"> <br>
-					        <textarea id="text-message" rows="4" cols="50" placeholder="Message"></textarea>
-							<br>
-					        <input id="submit-button" type="submit" value="Send Message">
+						        <input class = "info-box" type = "text" name = "name" placeholder="name"> <br>
+						        <input class = "info-box" type = "text" name = "email" placeholder="email(optional)"> <br>
+						        <textarea id="text-message" rows="4" cols="50" placeholder="Message"></textarea>
+								<br>
+						        <input id="submit-button" type="submit" value="Send Message">
 					        </form>
 					    </div>
 					</div>
@@ -126,18 +111,20 @@
 				</section>
 
 			</div>
-		</div><!-- /container -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/boxlayout.js"></script>
-		<script>
-			$(function() {
-				Boxlayout.init();
-			});
-		</script>
+		</div>
+		
 	</body>
 </html>
 
-
+<script src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="ejs_production.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/boxlayout.js"></script>
+<script>
+	$(function() {
+		Boxlayout.init();
+	});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -150,12 +137,12 @@
 </script>
 
 <script>
-console.log("1")
 function formSubmit(submitEvent) {
 	submitEvent.preventDefault();
 	alert("Message sent(Not really)");
 }
-
+function test(submitEvent) {
+	alert("GOTO Projects");
+}
 document.querySelector('#message-form').onsubmit = formSubmit;
-console.log("2")
 </script>
