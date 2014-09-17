@@ -7,9 +7,10 @@
 		<title>Ryan Ly</title>
 		<meta name="description" content="Fullscreen Layout with Page Transitions" />
 		<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
-		<meta name="author" content="Ryan Ly " />
+		<meta name="author" content="Ryan Ly" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
 		<script src="js/modernizr.custom.js"></script>
 		<script type="text/javascript" src="ejs_production.js"></script>
 	</head>
@@ -20,12 +21,16 @@
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-about">About</h2>
 					</div>
-					<div class="bl-content">
-						<h1>About Me</h1>
-						<p>Welcome to my webpage.  Enjoy your stay.  Contact me if you have any questions.</p>
-						<p>I'm Ryan and I'm a 2nd year student studying Computer Science at the <a class = "links" href =https://uwaterloo.ca/>University of Waterloo</a>.  I'm currently a developer at a startup called <a class = "links" href = http://www.wriber.com/>Wriber</a> located in Kitchener, Ontario for my co-op term.   We hope to help writers everywhere overcome their Writers' Block by providing them with suggestions on what to write about.  We try to solve problems in natural language processing. </p>
-						<p> I'm also working on an Sudoku application on Android.  I'm currently experimenting with Google's voice input and recognition APIs, so feel free to check it out.</p>
-					</div>
+						<div class="bl-content">
+							<div class = "center-content">
+								<h1>About Me</h1>
+								<p>Welcome to my webpage.  Enjoy your stay.  Contact me if you have any questions.</p>
+								<p>I'm Ryan and I'm a 3rd year student studying Computer Science at the University of Waterloo.</p>
+								<p>I love learning about modern tools and technologies, such as Node.js and Angularjs, and making cool stuff with these tools.</p>
+								<p>In terms of development experience, I've mostly worked in small teams in a start up setting.</p>
+								<p>I'm also working on a few projects.  You can check them out in the projects section.</p>
+							</div>
+						</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
 				<section id="middle">
@@ -41,6 +46,7 @@
 						<h2 class="bl-icon bl-icon-works">Projects</h2>
 					</div>
 					<div class="bl-content">
+						<div class = "center-content">
 						<h1>
 				        Projects
 				      </h1>
@@ -49,10 +55,11 @@
 				        Sudoku Voices
 				      </h2>
 				      <p>
-				        An Android application coded in Eclipse.  I plan to release this on the App store in the near future, as it is not quite ready yet. Meanwhile, you are free to download and try the game.  The APK can be downloaded from the link below. Please email me any suggestions or bugs found!
+				        An Android application coded in <del>Eclipse</del> Android Studio.  I plan to release this on the App store in the near future, as it is not quite ready yet. Meanwhile, you are free to download and try the game.  The APK can be downloaded from the link below. Please email me any suggestions or bugs found!
 				      </p>
 				      <p> <a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku" >Download</a>
 				      </p>
+				  	</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
@@ -62,8 +69,10 @@
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 					<div class="bl-content">
-					<h1>Blog</h1>
-						<p>Nothing here! Yet.</p>
+						<div class = "center-content">
+							<h1>Blog</h1>
+							<p>Nothing here! Yet.</p>
+						</div>
 					</div>
 				</section>
 				<section>
@@ -71,23 +80,33 @@
 						<h2 class="bl-icon bl-icon-contact">Contact</h2>
 					</div>
 					<div class="bl-content">
-						<h1>
-				        Contact Me
-				        </h1>
-				        <p>
-				          Find me on these networks, or email me!
-				        </p>
+						<div class = "center-content">
+							<h1>
+					        Contact Me
+					        </h1>
+					        <p>I would love to meet and talk over a cup of coffee.  Don't hesitate to contact me!</p>
+					        <p>
+					          Find me on these networks, or email me! ...Or leave a message.
+					        </p>
 
-				        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
-				        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
-				        <a class="bl-icon-social-media bl-icon-social-media-facebook"href = "https://www.facebook.com/RyanLyyy" title="Add me on Facebook!"> </a>
-				        <a class="bl-icon-social-media bl-icon-social-media-twitter" href = "https://twitter.com/Windask" title="Follow me on Twitter!"> </a>
-				        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
-				        </p>
+					        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
+					        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
+					        <a class="bl-icon-social-media bl-icon-social-media-facebook"href = "https://www.facebook.com/RyanLyyy" title="Add me on Facebook!"> </a>
+					        <a class="bl-icon-social-media bl-icon-social-media-twitter" href = "https://twitter.com/Windask" title="Follow me on Twitter!"> </a>
+					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
+					        </p>
 
-				        <p>
-				          Leave me a message!
-				        </p>
+					        <p>
+					          Leave me a message!
+					        </p>
+					        <form id = "message-form">
+					        <input class = "info-box" type = "text" name = "name" placeholder="name"> <br>
+					        <input class = "info-box" type = "text" name = "email" placeholder="email(optional)"> <br>
+					        <textarea id="text-message" rows="4" cols="50" placeholder="Message"></textarea>
+							<br>
+					        <input id="submit-button" type="submit" value="Send Message">
+					        </form>
+					    </div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
@@ -98,9 +117,11 @@
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 					<div class="bl-content">
-					<h1>Resume</h1>
-						<p>Nothing here! Yet.</p>
-						<p>Resume Revamp Progress: <a class='links'>0%</a></p>
+						<div class = "center-content">
+							<h1>Resume</h1>
+							<p>Nothing here! Yet.</p>
+							<p>Resume Revamp Progress: <a class='links'>40%</a></p>
+						</div>
 					</div>
 				</section>
 
@@ -115,3 +136,27 @@
 		</script>
 	</body>
 </html>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54934000-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+console.log("1")
+function formSubmit(submitEvent) {
+	submitEvent.preventDefault();
+	alert("Message sent(Not really)");
+
+}
+
+document.querySelector('#message-form').onsubmit = formSubmit;
+console.log("2")
+</script>

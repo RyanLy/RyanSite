@@ -567,3 +567,23 @@ section.bl-expand .bl-icon-close {
 		width: 40%;
 	}
 }
+
+.center-content {
+	margin-left:25%;
+	margin-right:25%;
+}
+
+.info-box{
+	line-height: 20px;
+	margin-top: 1%;
+}
+
+#text-message{
+	line-height: 20px;
+	margin-top: 1%;
+	resize: none;
+}
+
+#submit-button{
+	margin-top: 1%;
+}
