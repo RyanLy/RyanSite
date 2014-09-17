@@ -567,10 +567,11 @@ section.bl-expand .bl-icon-close {
 		width: 40%;
 	}
 }
-
-.center-content {
-	margin-left:25%;
-	margin-right:25%;
+@media only screen and (min-device-width: 480px){
+	.center-content {
+		margin-left:25%;
+		margin-right:25%;
+	}
 }
 
 .info-box{

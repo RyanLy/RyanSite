@@ -1,14 +1,12 @@
 require('newrelic');
 var express = require('express');
-var app  = express();
 var path = require('path');
+var app  = express();
 
-app.use(express.static(path.join(__dirname, '/')));
-app.use(express.static('./css'));
-app.use(express.static('./js'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.set('view engine', 'html');
-
 app.engine('.html', require('ejs').__express);
 
 app.get('/', function(req, res) {
