@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<script src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="ejs_production.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/boxlayout.js"></script>
+<script>
+	$(function() {
+		Boxlayout.init();
+	});
+</script>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -10,6 +19,7 @@
 		<meta name="author" content="Ryan Ly" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
 	</head>
 	<body>
 		<div class="container">
@@ -112,37 +122,28 @@
 
 			</div>
 		</div>
-		
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54934000-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<script>
+		function formSubmit(submitEvent) {
+			submitEvent.preventDefault();
+			alert("Message sent(Not really)");
+		}
+		function test(submitEvent) {
+			alert("GOTO Projects");
+		}
+		document.querySelector('#message-form').onsubmit = formSubmit;
+		</script>
 	</body>
 </html>
 
-<script src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="ejs_production.js"></script>
-<script src="js/jquery-2.1.1.min.js"></script>
-<script src="js/boxlayout.js"></script>
-<script>
-	$(function() {
-		Boxlayout.init();
-	});
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-54934000-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<script>
-function formSubmit(submitEvent) {
-	submitEvent.preventDefault();
-	alert("Message sent(Not really)");
-}
-function test(submitEvent) {
-	alert("GOTO Projects");
-}
-document.querySelector('#message-form').onsubmit = formSubmit;
-</script>
