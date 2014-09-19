@@ -566,7 +566,8 @@ section.bl-expand .bl-icon-close {
 		width: 40%;
 	}
 }
-@media only screen and (min-device-width: 480px){
+
+@media only screen and (min-device-width: 480px) and (min-width: 960px){
 	.center-content {
 		margin-left:25%;
 		margin-right:25%;

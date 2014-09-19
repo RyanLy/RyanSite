@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ryan Ly</title>
 		<meta name="description" content="Ryan Ly's Personal Website" />
-		<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
+		<meta name="keywords" content="ryan ly, website, computer science, personal" />
 		<meta name="author" content="Ryan Ly" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
@@ -86,10 +86,10 @@
 					        <a class="bl-icon-social-media bl-icon-social-media-twitter" href = "https://twitter.com/Windask" title="Follow me on Twitter!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
 					        <p>Leave me a message!</p>
-					        <form id = "message-form">
-						        <input class = "info-box" type = "text" name = "name" placeholder="name"> <br>
-						        <input class = "info-box" type = "text" name = "email" placeholder="email(optional)"> <br>
-						        <textarea id="text-message" rows="4" cols="50" placeholder="Message"></textarea>
+					        <form id = "message-form" action= "/message" method="post">
+						        <input id = "name-message" class = "info-box" type = "text" name = "name" placeholder="Name" autocomplete="off" required> <br>
+						        <input id = "email-message" class = "info-box" type = "text" name = "email" placeholder="Email(optional)" autocomplete="off"> <br>
+						        <textarea id="text-message" rows="4" cols="50" name = "message" placeholder="Message" autocomplete="off" required></textarea>
 								<br>
 						        <input id="submit-button" type="submit" value="Send Message">
 					        </form>
@@ -135,7 +135,20 @@
 		<script>
 		function formSubmit(submitEvent) {
 			submitEvent.preventDefault();
-			alert("Message sent(Not really)");
+			name = $('#name-message').val();
+			email = $('#email-message').val();
+			message = $('#text-message').val();
+			console.log(name);
+			$.ajax({
+            	type: "POST",
+               	url: '/message?name=' + name + "&email=" + email+"&message=" + message,
+               	success: function( data ){
+               		alert(data);
+               	},
+                error: function(err){
+                	alert("Error, Please try again.");
+               }
+             });
 		}
 		function test(submitEvent) {
 			alert("GOTO Projects");
