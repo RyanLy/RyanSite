@@ -19,24 +19,40 @@ app.post('/message',
 		name = req.param('name');
 		message = req.param('message');
 		email = req.param('email');
+
 		if (name == "" || message == ""){
 			res.send(405,err);
 		}
-		else if (email != ""){
-			if (email.indexOf("@") > -1 ){
-				res.send("Thank you " + name + " for your message!\nA verification email will be sent to " + email);
+		else{
+			if (email != ""){
+				if (email.indexOf("@") > -1 ){
+					res.send("Thank you " + name + " for your message!\nA verification email will be sent to " + email);
+					var mailOptions = {
+					    from: "Ryan Ly<ryan@ryanly.ca>", // sender address
+					    to: email, // list of receivers
+					    subject: "Verification Email", // Subject line
+					    text: "Thank you for your message. This is an email to verify your message to Ryan.\nMessage: \"" + message + "\"", // plaintext body
+					}
+					smtpTransport.sendMail(mailOptions, function(error, response){
+					    if(error){
+					        console.log(error);
+					    }else{
+					        console.log("Message sent: " + response.message);
+					    }
+					});
+				}
+				else{
+					res.send("Please use a valid email!");
+				}
 			}
 			else{
-				res.send("Please use a valid email!");
+    			res.send("Thank you " + name + " for your message!");
 			}
-		}
-		else {
-    		res.send("Thank you " + name + " for your message!");
-    		var mailOptions = {
+			var mailOptions = {
 			    from: "Ryan Ly<ryan@ryanly.ca>", // sender address
 			    to: "ryan@ryanly.ca", // list of receivers
 			    subject: "Website Message", // Subject line
-			    text: name + " says " + message, // plaintext body
+			    text: name + " says, \"" + message + "\"", // plaintext body
 			}
 			smtpTransport.sendMail(mailOptions, function(error, response){
 			    if(error){

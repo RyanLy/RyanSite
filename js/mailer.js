@@ -4,7 +4,7 @@ var nodemailer = require("nodemailer");
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Zoho",
     auth: {
-        user: process.env.EMAIL,
+        user: "ryan@ryanly.ca",
         pass: process.env.EMAIL_PASSWORD
     }
 });
