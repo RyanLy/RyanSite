@@ -11,7 +11,6 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
-		<script type="text/javascript" src="ejs_production.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -27,7 +26,7 @@
 							<p>I'm Ryan and I'm a 3rd year student studying Computer Science at the University of Waterloo.</p>
 							<p>I love learning about modern tools and technologies, such as Node.js and Angularjs, and making cool stuff with these tools.</p>
 							<p>In terms of development experience, I've mostly worked in small teams in a start up setting, so I'm looking some development experience with larger technology firms</p>
-							<p>I'm also working on a few projects.  You can check them out in the <a href="javascript:test()">projects</a> section.</p>
+							<p>I'm also working on a few projects.  You can check them out in the projects section.</p>
 						</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
@@ -48,11 +47,15 @@
 					<div class="bl-content">
 						<div class = "center-content">
 							<h1>Projects</h1><br>
-					      	<h2><a class="bl-icon-projects bl-icon-projects-android"></a>Sudoku Voices</h2>
+					      	<h2><a class="bl-icon-projects bl-icon-projects-android"></a><a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku">Sudoku Voices</a></h2>
 						      <p>
-						        An Android application coded in <del>Eclipse</del> Android Studio.  I plan to release this on the App store in the near future, as it is not quite ready yet. Meanwhile, you are free to download and try the game.  The APK can be downloaded from the link below. Please email me any suggestions or bugs found!
+						        An Android application coded in <del>Eclipse</del> Android Studio.  Sudoku Voices is not your ordinary Sudoku application.  It's Sudoku that can speak and understand you!  Come and give it a try on your Android Device.  For best results for the speech features, I would recommend Android Jelly Bean(4.1) and up.  Sudoku Voices is currently on the Google Play Store.  Feel free to try it out.  Please email me any suggestions that you may have!
 						      </p>
-						      <p> <a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku" >Download</a></p>
+						      <br>
+						    <h2><a class = "links" href="http://wardtracker.ryanly.ca">WardTracker</a></h2>
+							<p>
+						        A web application coded in a MEAN JavaScript stack.  This application is designed for the world's most popular video game, League of Legends.  This application provides a simple interface to compare the number of wards placed in their last 10 game sessions.  This makes it easy to compare how often a player wards relative to other players.
+						      </p>
 					  	</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
@@ -80,11 +83,10 @@
 							<h1>Contact Me</h1>
 					        <p>I would love to meet and talk over a cup of coffee.  Don't hesitate to contact me!</p>
 					        <p>Find me on these networks, or email me! ...Or leave a message.</p>
+					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
 					        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
 					        <a class="bl-icon-social-media bl-icon-social-media-facebook"href = "https://www.facebook.com/RyanLyyy" title="Add me on Facebook!"> </a>
-					        <a class="bl-icon-social-media bl-icon-social-media-twitter" href = "https://twitter.com/Windask" title="Follow me on Twitter!"> </a>
-					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
 					        <p>Leave me a message!</p>
 					        <form id = "message-form" action= "/message" method="post">
 						        <input id = "name-message" class = "info-box" type = "text" name = "name" placeholder="Name" autocomplete="off" required> <br>

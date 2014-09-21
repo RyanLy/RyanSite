@@ -32,11 +32,6 @@ body {
 a {
 	color: #f0f0f0;
 	text-decoration: none;
-	font-weight: 700;
-	letter-spacing: 2px;
-	padding: 0 5px;
-	text-transform: uppercase;
-	font-size: 80%;
 }
 
 a:hover {
@@ -212,7 +207,10 @@ a:hover {
 	text-transform: none;
 	line-height: 1;
 	cursor: pointer;
+	padding: 0 5px;
+	font-size: 90%;
 	-webkit-font-smoothing: antialiased;
+
 }
 
 .bl-icon-social-media:before {
@@ -587,4 +585,8 @@ section.bl-expand .bl-icon-close {
 
 #submit-button{
 	margin-top: 1%;
+}
+
+del{
+	color:#F20000;
 }

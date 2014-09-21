@@ -3,7 +3,9 @@ var express = require('express');
 var path = require('path');
 var app  = express();
 var smtpTransport = require("./js/mailer");
+var favicon = require('serve-favicon');
 
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, '/public')));
 
@@ -52,7 +54,7 @@ app.post('/message',
 			    from: "Ryan Ly<ryan@ryanly.ca>", // sender address
 			    to: "ryan@ryanly.ca", // list of receivers
 			    subject: "Website Message", // Subject line
-			    text: name + " says, \"" + message + "\"", // plaintext body
+			    text: name + "(" + email + ") " + " says, \"" + message + "\"", // plaintext body
 			}
 			smtpTransport.sendMail(mailOptions, function(error, response){
 			    if(error){
