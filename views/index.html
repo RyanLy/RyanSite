@@ -9,25 +9,24 @@
 		<meta name="keywords" content="ryan ly, website, computer science, personal" />
 		<meta name="author" content="Ryan Ly" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div id="bl-main" class="bl-main">
 				<section>
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-about">About</h2>
+						<h2 class="bl-icon bl-icon-about"><span class="heading-label">About</span></h2>
 					</div>
 					<div class="bl-content">
 						<div class = "center-content">
 							<h1>About Me</h1>
-							<p>Welcome to my webpage.  Enjoy your stay.  Contact me if you have any questions.</p>
+							<p>Welcome to my website.  Enjoy your stay.  Contact me if you have any questions.</p>
 							<p>I'm Ryan and I'm a 3rd year student studying Computer Science at the University of Waterloo.</p>
 							<p>I love using and learning about modern tools and technologies, such as Node.js and Angularjs, and making cool stuff with these tools.</p>
 							<p>In terms of development experience, I've work mostly with modern web frameworks such as Node.js and Django.  I believe the web is the future, and the demand for development in the browsers will continue to grow.
 							<p>I'm also working on a few projects.  You can check them out in the projects section.</p>
+							<p>I'm currently in the progress of creating a new site</p>
 						</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
@@ -43,20 +42,42 @@
 
 				<section id="bl-work-section">
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-works">Projects</h2>
+						<h2 class="bl-icon bl-icon-works"><span class="heading-label">Projects</span></h2>
 					</div>
 					<div class="bl-content">
 						<div class = "center-content">
 							<h1>Projects</h1><br>
-					      	<h2><a class="bl-icon-projects bl-icon-projects-android"></a><a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku">Sudoku Voices</a></h2>
-						      <p>
-						        An Android application coded in Android Studio.  Sudoku Voices is not your ordinary Sudoku application.  It's Sudoku that can speak and understand you!  Come and give it a try on your Android Device.  For best results for the speech features, I would recommend Android Jelly Bean(4.1) and up.  Sudoku Voices is currently on the Google Play Store.  Feel free to try it out.  Please email me any suggestions that you may have!
-						      </p>
-						      <br>
-						    <h2><a class = "links" href="http://wardtracker.ryanly.ca">WardTracker</a></h2>
+							<h2>
+								<a class = "links" href="https://www.pianoshelf.com/">
+									<img src="pianoicon.png" style="height:50px; width:50px" class="project-icon"></img>
+									PianoShelf
+								</a>
+							</h2>
 							<p>
+								We are revolutionizing how musicians share their music. We are building a platform to allow musicians to share their favourite pieces of piano sheet music with other musicians.  Our technology stack uses Django serving a REST API on the back and AngularJS in the front for client sided routing and easy data binding. 
+							</p>
+						    <br>
+					      	<h2>
+								<a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku">
+									<img src="sudokuicon.png" style="height:50px; width:50px" class="project-icon"></img>
+									Sudoku Voices
+								</a>
+							</h2>
+								<p>
+								An Android application coded in Android Studio.  Sudoku Voices is not your ordinary Sudoku application.  It's Sudoku that can speak and understand you!  Come and give it a try on your Android Device.  For best results for the speech features, I would recommend Android Jelly Bean(4.1) and up.  Sudoku Voices is currently on the Google Play Store.  Feel free to try it out.  Please email me any suggestions that you may have!
+								</p>
+								<br>
+						    
+						    <h2>
+								<a class = "links" href="http://wardtracker.ryanly.ca">
+								<img src="sightward.png" style="height:50px; width:50px" class="project-icon"></img>
+								WardTracker
+								</a>
+							</h2>
+								<p>
 						        A web application coded in a MEAN JavaScript stack.  This application is designed for the world's most popular video game, League of Legends.  This application provides a simple interface to compare the number of wards placed in their last 10 game sessions.  This makes it easy to compare how often a player wards relative to other players.
-						      </p>
+						      	</p>
+						  
 					  	</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
@@ -64,7 +85,7 @@
 
 				<section>
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-blog">Blog</h2>
+						<h2 class="bl-icon bl-icon-blog"><span class="heading-label">Blog</span></h2>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 					<div class="bl-content">
@@ -77,7 +98,7 @@
 
 				<section>
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-contact">Contact</h2>
+						<h2 class="bl-icon bl-icon-contact"><span class="heading-label">Contact</span></h2>
 					</div>
 					<div class="bl-content">
 						<div class = "center-content">
@@ -87,7 +108,6 @@
 					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
 					        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
-					        <a class="bl-icon-social-media bl-icon-social-media-facebook"href = "https://www.facebook.com/RyanLyyy" title="Add me on Facebook!"> </a>
 					        <p>Leave me a message!</p>
 					        <form id = "message-form" action= "/message" method="post">
 						        <input id = "name-message" class = "info-box" type = "text" name = "name" placeholder="Name" autocomplete="off" required> <br>
@@ -103,19 +123,20 @@
 
 				<section>
 					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-resume">Resume</h2>
+						<h2 class="bl-icon bl-icon-resume"><span class="heading-label">Resume</span></h2>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 					<div class="bl-content">
 						<div class = "center-content" style="height:100%">
-								<iframe src="https://resume.creddle.io/embed/fknfkwaa2bf"
-  									style="width:100%; height:98%" seamless></iframe> 
+							<iframe src="https://resume.creddle.io/embed/fknfkwaa2bf"
+  								style="width:100%; height:98%" seamless></iframe> 
 						</div>
 					</div>
 				</section>
 
 			</div>
 		</div>
+		<script src="js/modernizr.custom.js"></script>
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script src="js/boxlayout.js"></script>
 		<script>
@@ -129,7 +150,7 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-54934000-1', 'auto');
+		  ga('create', 'UA-54934000-3', 'auto');
 		  ga('send', 'pageview');
 
 		</script>
