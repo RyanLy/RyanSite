@@ -22,11 +22,9 @@
 						<div class = "center-content">
 							<h1>About Me</h1>
 							<p>Welcome to my website.  Enjoy your stay.  Contact me if you have any questions.</p>
-							<p>I'm Ryan and I'm a 3rd year student studying Computer Science at the University of Waterloo.</p>
-							<p>I love using and learning about modern tools and technologies, such as Node.js and Angularjs, and making cool stuff with these tools.</p>
-							<p>In terms of development experience, I've work mostly with modern web frameworks such as Node.js and Django.  I believe the web is the future, and the demand for development in the browsers will continue to grow.
-							<p>I'm also working on a few projects.  You can check them out in the projects section.</p>
-							<p>I'm currently in the progress of creating a new site</p>
+							<p>I'm Ryan and I'm a 4th year computer science at the University of Waterloo.</p>
+							<p>Check out my LinkedIn and Github for more information about me!</p>
+							<p>I'm currently in the process of revamping my website with newer technologies.</p>
 						</div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
@@ -108,14 +106,6 @@
 					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
 					        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
 					        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
-					        <p>Leave me a message!</p>
-					        <form id = "message-form" action= "/message" method="post">
-						        <input id = "name-message" class = "info-box" type = "text" name = "name" placeholder="Name" autocomplete="off" required> <br>
-						        <input id = "email-message" class = "info-box" type = "text" name = "email" placeholder="Email(optional)" autocomplete="off"> <br>
-						        <textarea id="text-message" rows="4" cols="50" name = "message" placeholder="Message" autocomplete="off" required></textarea>
-								<br>
-						        <input id="submit-button" type="submit" value="Send Message">
-					        </form>
 					    </div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
@@ -127,9 +117,12 @@
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 					<div class="bl-content">
-						<div class = "center-content" style="height:100%">
+						<div class="center-content-resume" style="height:100%;">
 							<iframe src="https://resume.creddle.io/embed/fknfkwaa2bf"
-  								style="width:100%; height:98%" seamless></iframe> 
+  								style="width:900px; height:98%" seamless></iframe> 
+						</div>
+						<div class="center-content-resume-mobile">
+							<a href="https://resume.creddle.io/embed/fknfkwaa2bf" class="resume-font-size">Click here for Resume</a>
 						</div>
 					</div>
 				</section>
@@ -153,27 +146,6 @@
 		  ga('create', 'UA-54934000-3', 'auto');
 		  ga('send', 'pageview');
 
-		</script>
-
-		<script>
-		function formSubmit(submitEvent) {
-			submitEvent.preventDefault();
-			name = $('#name-message').val();
-			email = $('#email-message').val();
-			message = $('#text-message').val();
-			console.log(name);
-			$.ajax({
-            	type: "POST",
-               	url: '/message?name=' + name + "&email=" + email+"&message=" + message,
-               	success: function( data ){
-               		alert(data);
-               	},
-                error: function(err){
-                	alert("Error, Please try again.");
-               }
-             });
-		}
-		document.querySelector('#message-form').onsubmit = formSubmit;
 		</script>
 	</body>
 </html>
