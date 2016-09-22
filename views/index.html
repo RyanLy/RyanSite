@@ -6,20 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Ryan Ly</title>
 		<meta name="description" content="Ryan Ly's Personal Website" />
-		<meta name="keywords" content="ryan ly, website, computer science, personal" />
+		<meta name="keywords" content="ryan ly, website, computer science, personal, waterloo, github, linkedin, technology, web" />
 		<meta name="author" content="Ryan Ly" />
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.png">
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 	</head>
 	<body>
 		<div class="container">
 			<div id="bl-main" class="bl-main">
-				<section>
+				<section data-panel="1">
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-about"><span class="heading-label">About</span></h2>
 					</div>
 					<div class="bl-content">
-						<div class = "center-content">
+						<div class="center-content">
 							<h1>About Me</h1>
 							<p>Welcome to my website.  Enjoy your stay.  Contact me if you have any questions.</p>
 							<p>I'm Ryan and I'm a 4th year computer science at the University of Waterloo.</p>
@@ -29,21 +29,63 @@
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
-				<section id="middle">
+				<section id="middle" data-panel="2">
 					<div class="bl-box">
 						<h2>Ryan Ly</h2>
 					</div>
+					<span class="bl-icon bl-icon-close"></span>
+				</section>
+				<section id="bl-work-section" data-panel="3">
+					<div class="bl-box">
+						<h2 class="bl-icon bl-icon-resume"><span class="heading-label">Resume</span></h2>
+					</div>
+					<span class="bl-icon bl-icon-close"></span>
 					<div class="bl-content">
+						<div class="center-content-resume" style="height:100%;">
+							<iframe src="https://resume.creddle.io/embed/fknfkwaa2bf"
+  										style="width:871px; height:98%" seamless></iframe> 
+						</div>
+						<div class="center-content-resume-mobile">
+							<a href="https://resume.creddle.io/embed/fknfkwaa2bf" class="resume-font-size">
+								Click here for Resume
+							</a>
+						</div>
+					</div>
+				</section>
+				<section data-panel="4">
+					<div class="bl-box">
+						<h2 class="bl-icon bl-icon-blog"><span class="heading-label">Blog</span></h2>
+					</div>
+					<span class="bl-icon bl-icon-close"></span>
+					<div class="bl-content">
+						<div class="center-content">
+							<h1>Blog</h1>
+							<p>Nothing here! Yet.</p>
+						</div>
+					</div>
+				</section>
+				<section data-panel="5">
+					<div class="bl-box">
+						<h2 class="bl-icon bl-icon-contact"><span class="heading-label">Contact</span></h2>
+					</div>
+					<div class="bl-content">
+						<div class="center-content">
+							<h1>Contact Me</h1>
+				        <p>I would love to meet and talk over a cup of coffee.  Don't hesitate to contact me!</p>
+				        <p>Find me on these networks, or email me! ...Or leave a message.</p>
+				        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
+				        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
+				        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!"></a>
+					    </div>
 					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
-
-				<section id="bl-work-section">
+				<section data-panel="6">
 					<div class="bl-box">
 						<h2 class="bl-icon bl-icon-works"><span class="heading-label">Projects</span></h2>
 					</div>
 					<div class="bl-content">
-						<div class = "center-content">
+						<div class="center-content">
 							<h1>Projects</h1><br>
 							<h2>
 								<a class = "links" href="https://www.pianoshelf.com/">
@@ -52,84 +94,44 @@
 								</a>
 							</h2>
 							<p>
-								We are revolutionizing how musicians share their music. We are building a platform to allow musicians to share their favourite pieces of piano sheet music with other musicians.  Our technology stack uses Django serving a REST API on the back and AngularJS in the front for client sided routing and easy data binding. 
+								We are revolutionizing how musicians share their music. We are building a platform to allow musicians 
+								to share their favourite pieces of piano sheet music with other musicians.  Our technology stack uses 
+								Django serving a REST API on the back and AngularJS in the front for client sided routing and easy 
+								data binding. 
 							</p>
-						    <br>
-					      	<h2>
+							<br>
+							<h2>
 								<a class = "links" href="https://play.google.com/store/apps/details?id=com.ryanly.sudoku">
 									<img src="sudokuicon.png" style="height:50px; width:50px" class="project-icon"></img>
 									Sudoku Voices
 								</a>
 							</h2>
-								<p>
-								An Android application coded in Android Studio.  Sudoku Voices is not your ordinary Sudoku application.  It's Sudoku that can speak and understand you!  Come and give it a try on your Android Device.  For best results for the speech features, I would recommend Android Jelly Bean(4.1) and up.  Sudoku Voices is currently on the Google Play Store.  Feel free to try it out.  Please email me any suggestions that you may have!
-								</p>
-								<br>
-						    
-						    <h2>
+							<p>
+								An Android application coded in Android Studio.  Sudoku Voices is not your ordinary Sudoku application.
+								It's Sudoku that can speak and understand you!  Come and give it a try on your Android Device.  
+								For best results for the speech features, I would recommend Android Jelly Bean(4.1) and up.
+								Sudoku Voices is currently on the Google Play Store.  Feel free to try it out. 
+								Please email me any suggestions that you may have!
+							</p>
+							<br>
+							<h2>
 								<a class = "links" href="http://wardtracker.ryanly.ca">
-								<img src="sightward.png" style="height:50px; width:50px" class="project-icon"></img>
-								WardTracker
+									<img src="sightward.png" style="height:50px; width:50px" class="project-icon"></img>
+									WardTracker
 								</a>
 							</h2>
-								<p>
-						        A web application coded in a MEAN JavaScript stack.  This application is designed for the world's most popular video game, League of Legends.  This application provides a simple interface to compare the number of wards placed in their last 10 game sessions.  This makes it easy to compare how often a player wards relative to other players.
-						      	</p>
-						  
-					  	</div>
-					</div>
-					<span class="bl-icon bl-icon-close"></span>
-				</section>
-
-				<section>
-					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-blog"><span class="heading-label">Blog</span></h2>
-					</div>
-					<span class="bl-icon bl-icon-close"></span>
-					<div class="bl-content">
-						<div class = "center-content">
-							<h1>Blog</h1>
-							<p>Nothing here! Yet.</p>
+							<p>
+								A web application coded in a MEAN JavaScript stack.  This application is designed for the world's 
+								most popular video game, League of Legends.  This application provides a simple interface to compare
+								the number of wards placed in their last 10 game sessions.  This makes it easy to compare how often
+								a player wards relative to other players.
+							</p>
 						</div>
 					</div>
-				</section>
-
-				<section>
-					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-contact"><span class="heading-label">Contact</span></h2>
-					</div>
-					<div class="bl-content">
-						<div class = "center-content">
-							<h1>Contact Me</h1>
-					        <p>I would love to meet and talk over a cup of coffee.  Don't hesitate to contact me!</p>
-					        <p>Find me on these networks, or email me! ...Or leave a message.</p>
-					        <a class="bl-icon-social-media bl-icon-social-media-git" href = "https://github.com/RyanLy" title="Check out my Github!"></a>
-					        <a class="bl-icon-social-media bl-icon-social-media-linkedin" href = "https:\\ca.linkedin.com/in/ryanly1/" title="Add me on LinkedIn!"> </a>
-					        <a class="bl-icon-social-media bl-icon-social-media-mail"href="mailto:ryan@ryanly.ca?Subject=Hey Ryan&Body=" title="Email Me!" ></a>
-					    </div>
-					</div>
 					<span class="bl-icon bl-icon-close"></span>
 				</section>
-
-				<section>
-					<div class="bl-box">
-						<h2 class="bl-icon bl-icon-resume"><span class="heading-label">Resume</span></h2>
-					</div>
-					<span class="bl-icon bl-icon-close"></span>
-					<div class="bl-content">
-						<div class="center-content-resume" style="height:100%;">
-							<iframe src="https://resume.creddle.io/embed/fknfkwaa2bf"
-  								style="width:900px; height:98%" seamless></iframe> 
-						</div>
-						<div class="center-content-resume-mobile">
-							<a href="https://resume.creddle.io/embed/fknfkwaa2bf" class="resume-font-size">Click here for Resume</a>
-						</div>
-					</div>
-				</section>
-
 			</div>
 		</div>
-		<script src="js/modernizr.custom.js"></script>
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script src="js/boxlayout.js"></script>
 		<script>
@@ -145,8 +147,6 @@
 
 		  ga('create', 'UA-54934000-3', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
 	</body>
 </html>
-

@@ -41,7 +41,7 @@ a:hover {
 .links:hover{
 	
 	cursor:pointer;
-	color:#000D47;
+	color:#333;
 }
 
 .container { height: 100%; }
@@ -158,7 +158,7 @@ a:hover {
 
 
 .bl-icon:hover{
-	color:#000D47;
+	color: #333;
 	-webkit-animation-name: thumb;
 	-webkit-animation-duration: 200ms;
 	-webkit-transform-origin:50% 50%;
@@ -167,7 +167,7 @@ a:hover {
 }
 
 .bl-icon-social-media:hover{
-	color:#000D47;
+	color:#333;
 }
 
 .bl-icon:before {

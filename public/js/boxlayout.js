@@ -8,37 +8,13 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
+ 
+// Modified to supports page hashes, so changes in the url hash automatically switches to the correct panel.
+// Heavily modified to remove a lot of unused things.
 var Boxlayout = (function() {
 
 	var $el = $( '#bl-main' ),
-		$sections = $el.children( 'section' ),
-		// works section
-		$sectionWork = $( '#bl-work-section' ),
-		// work items
-		$workItems = $( '#bl-work-items > li' ),
-		// middle section
-		$middleSection = $( '#middle ' ),
-		// work panels
-		$workPanelsContainer = $( '#bl-panel-work-items' ),
-		$workPanels = $workPanelsContainer.children( 'div' ),
-		totalWorkPanels = $workPanels.length,
-		// navigating the work panels
-		$nextWorkItem = $workPanelsContainer.find( 'nav > span.bl-next-work' ),
-		// if currently navigating the work items
-		isAnimating = false,
-		// close work panel trigger
-		$closeWorkItem = $workPanelsContainer.find( 'nav > span.bl-icon-close' ),
-		transEndEventNames = {
-			'WebkitTransition' : 'webkitTransitionEnd',
-			'MozTransition' : 'transitionend',
-			'OTransition' : 'oTransitionEnd',
-			'msTransition' : 'MSTransitionEnd',
-			'transition' : 'transitionend'
-		},
-		// transition end event name
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		// support css transitions
-		supportTransitions = Modernizr.csstransitions;
+		  $sections = $el.children( 'section' );
 
 	function init() {
 		initEvents();
@@ -50,92 +26,52 @@ var Boxlayout = (function() {
 			
 			var $section = $( this );
 
-			// expand the clicked section and scale down the others
 			$section.on( 'click', function() {
+				var panelNumber = $(this).data('panel');
+				
+				if (panelNumber !== 2) {
+          location.hash = '#' + panelNumber;
+				}
 
-				if( !$section.data( 'open' ) && $section.attr("id") != 'middle' ) {
-					$section.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
+			} ).find( 'span.bl-icon-close' ).on( 'click', function(event) {
+        location.hash = '#';
+				// Prevent bottom sections from being clicked
+				event.stopPropagation();
+			} );
+
+		} );
+
+		function openPanel(panelNumber) {
+			if (panelNumber > 0 && panelNumber < 7) {
+				var panelNumber = location.hash.substr(location.hash.length - 1);
+				var targetedSection = $("section[data-panel='" + panelNumber + "']")[0];
+				var $targetedSection = $(targetedSection);
+				
+				if (!$targetedSection.data( 'open' ) && $targetedSection.attr("id") != 'middle' ) {
+					$targetedSection.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
 					$el.addClass( 'bl-expand-item' );	
 				}
-
-			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
-				
-				// close the expanded section and scale up the others
-				$section.data( 'open', false ).removeClass( 'bl-expand' ).on( transEndEventName, function( event ) {
-					if( !$( event.target ).is( 'section' ) ) return false;
-					$( this ).off( transEndEventName ).removeClass( 'bl-expand-top' );
-				} );
-
-				if( !supportTransitions ) {
-					$section.removeClass( 'bl-expand-top' );
-				}
-
-				$el.removeClass( 'bl-expand-item' );
-				
-				return false;
-
-			} );
-
-		} );
-
-		// clicking on a work item: the current section scales down and the respective work panel slides up
-		$workItems.on( 'click', function( event ) {
-
-			// scale down main section
-			$sectionWork.addClass( 'bl-scale-down' );
-
-			// show panel for this work item
-			$workPanelsContainer.addClass( 'bl-panel-items-show' );
-
-			var $panel = $workPanelsContainer.find("[data-panel='" + $( this ).data( 'panel' ) + "']");
-			currentWorkPanel = $panel.index();
-			$panel.addClass( 'bl-show-work' );
-
-			return false;
-
-		} );
-
-		// navigating the work items: current work panel scales down and the next work panel slides up
-		$nextWorkItem.on( 'click', function( event ) {
-			
-			if( isAnimating ) {
-				return false;
 			}
-			isAnimating = true;
+		}
 
-			var $currentPanel = $workPanels.eq( currentWorkPanel );
-			currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel + 1 : 0;
-			var $nextPanel = $workPanels.eq( currentWorkPanel );
-
-			$currentPanel.removeClass( 'bl-show-work' ).addClass( 'bl-hide-current-work' ).on( transEndEventName, function( event ) {
-				if( !$( event.target ).is( 'div' ) ) return false;
-				$( this ).off( transEndEventName ).removeClass( 'bl-hide-current-work' );
-				isAnimating = false;
-			} );
-
-			if( !supportTransitions ) {
-				$currentPanel.removeClass( 'bl-hide-current-work' );
-				isAnimating = false;
-			}
+		window.onhashchange = function(event) {
+			var panelNumber = location.hash.substr(1, location.hash.length);
+      console.log(panelNumber);
 			
-			$nextPanel.addClass( 'bl-show-work' );
+			$sections.each( function() {
+				var $section = $( this );
+				$section.data( 'open', false ).removeClass( 'bl-expand' ).removeClass( 'bl-expand-top' );
+			});
 
-			return false;
-
-		} );
-
-		// clicking the work panels close button: the current work panel slides down and the section scales up again
-		$closeWorkItem.on( 'click', function( event ) {
-
-			// scale up main section
-			$sectionWork.removeClass( 'bl-scale-down' );
-			$workPanelsContainer.removeClass( 'bl-panel-items-show' );
-			$workPanels.eq( currentWorkPanel ).removeClass( 'bl-show-work' );
+			$el.removeClass( 'bl-expand-item' );
 			
-			return false;
-
-		} );
-
+			openPanel(panelNumber);
+		}
+		
+		window.onload = function() {
+      var panelNumber = location.hash.substr(1, location.hash.length);
+		  openPanel(panelNumber);
+		}
 	}
 
 	return { init : init };
