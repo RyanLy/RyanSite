@@ -56,7 +56,7 @@ var Boxlayout = (function() {
 
 		window.onhashchange = function(event) {
 			var panelNumber = location.hash.substr(1, location.hash.length);
-      console.log(panelNumber);
+//      console.log(panelNumber);
 			
 			$sections.each( function() {
 				var $section = $( this );
