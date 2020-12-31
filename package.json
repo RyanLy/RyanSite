@@ -10,7 +10,7 @@
   "author": "Ryan Ly",
   "license": "ISC",
   "dependencies": {
-    "ejs": "~1.0.0",
+    "ejs": "~2.5.5",
     "express": "^4.17.1",
     "newrelic": "~1.6.0",
     "nodemailer": "~0.7.0",
