@@ -10,11 +10,14 @@
   "author": "Ryan Ly",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "~1.0.0",
     "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
     "newrelic": "~1.6.0",
     "nodemailer": "~0.7.0",
     "path": "~0.4.9",
+    "request": "^2.88.2",
     "serve-favicon": "^2.5.0"
   },
   "engines": {
